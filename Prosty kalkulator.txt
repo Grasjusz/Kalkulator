@@ -1,0 +1,44 @@
+def main():
+    
+    end = False
+    while not end:
+        print("Podaj pierwsz¹ cyfrê")
+        number1 = float(input())
+        print("Podaj operator +,-,*,/,%,")
+        operator = input()
+        print("Podaj drug¹ cyfrê")
+        number2 = float(input())
+        
+        if operator == "+":
+            result = number1 + number2
+        elif operator == "-":
+            result = number1 - number2
+        elif operator == "*":
+            result = number1 * number2
+        elif operator == "/":
+            result = number1 / number2
+        elif operator == "%":
+            result = number1 % number2
+        else:
+            print("Wyst¹pi³ b³¹d - spróbuj jeszcze raz")
+            break
+        
+        print("Twój wynik to: " + str(result))
+        print("Chcesz dokonaæ ponowych obliczeñ? T/N")
+        
+        choice = input()
+        if choice == "N":
+            end = True
+        elif choice == "n":
+            end = True
+        elif choice == "T":
+            end = False
+        elif choice == "t":
+            end = False
+        else:
+            print("Wyst¹pi³ b³¹d - spróbuj jeszcze raz")
+            break
+
+    
+if __name__ == "__main__":
+    main()
